@@ -11,4 +11,5 @@ COPY go.mod go.sum ./
 RUN go mod download
 EXPOSE 8080
 
-CMD ["go", "run", "main.go"]
+RUN go install github.com/cosmtrek/air@latest
+CMD ["air"]
